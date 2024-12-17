@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* Header Navigation */
+header {
+    background: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #b38300;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+}
+
+.icons a {
+    margin-left: 15px;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+/* Checkout Section */
+.checkout-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: url(' https://s3-alpha-sig.figma.com/img/1461/f3d6/ff74c027a1888544144abe4be6e02cbf?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nh4JQdvERQ38I6WypZXsFgUiWaNGiRZn6Sn06x6SHRo3XmygQO3AlUU2Brp0TOEQQGt9ZobU9HTreRoa4ZNdCLfYODBCjekr0qt2dt-n31EwatRVazWHD4Ak1nqQF~HxHeZFWOz0Nr9WZrYJIbE4Jn8EsDjv2lUZkyXtFQv6qmz7GBy9knwukx51Wbj-tNof4u6RnNIZJJUDYu~2Wh5RrtZfG~Xp-ixpeTmreas~yGkyHCQcA61FjdTGCjkPZ5TDoMg~FKxsMqYdF19stZKGCB~y0RJDTS2pta76JfPG-JMreFwl9zY-wDEq-KfsQoNAI62Ij45~2-FDRu1zKwQMOw__ ') no-repeat center center/cover;
+    color: #fff; /* Makes text white for better contrast */
+    height: 300px; /* Adjust height */
+
+}
+
+
+.breadcrumb {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.breadcrumb a {
+    color: #000;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: #888;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+}
+
+h1::before {
+    content: "∧";
+    display: block;
+    font-size: 1.5rem;
+    color: #b38300;
+    margin-bottom: 10px;
+}
+/*SECOND CODE*/
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Billing Section */
+.billing-details, .order-summary {
+    flex: 1;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+}
+
+.input-group div {
+    flex: 1;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 10px 0 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Order Summary */
+.order-summary h2 span {
+    float: right;
+}
+
+.product-details p {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.payment-methods p {
+    margin: 10px 0;
+}
+
+.payment-info {
+    font-size: 0.9rem;
+    color: #777;
+    margin-left: 20px;
+}
+
+.privacy-policy {
+    font-size: 0.9rem;
+    margin-top: 15px;
+    color: #555;
+}
+
+.place-order-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.place-order-btn:hover {
+    background-color: #555;
+}
+/*THIRD CODE*/
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f4f0;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.features .feature {
+    max-width: 300px;
+}
+
+.features h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #f5f5f5;
+    padding: 20px 10px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+    min-width: 150px;
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #555;
+}
+
+/* Newsletter */
+.footer-column form {
+    display: flex;
+    align-items: center;
+}
+
+.footer-column input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.footer-column button {
+    padding: 8px 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-column button:hover {
+    background-color: #555;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #777;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <div class="icons">
+                <a href="#"><i>👤</i></a>
+                <a href="#"><i>🔍</i></a>
+                <a href="#"><i>🛒</i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="breadcrumb">
+            <a href="">Home</a> > <span>Checkout</span>
+        </div>
+        <h1>Checkout</h1>
+    </section>
+
+
+    <!-- Main Container -->
+    <div class="checkout-container">
+        <!-- Billing Details Section -->
+        <section class="billing-details">
+            <h2>Billing details</h2>
+            <form>
+                <div class="input-group">
+                    <div>
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="">
+                    </div>
+                    <div>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="">
+                    </div>
+                </div>
+
+                <label for="company-name">Company Name (Optional)</label>
+                <input type="text" id="company-name" placeholder="">
+
+                <label for="country">Country / Region</label>
+                <select id="country">
+                    <option>Sri Lanka</option>
+                </select>
+
+                <label for="street-address">Street address</label>
+                <input type="text" id="street-address" placeholder="">
+
+                <label for="town-city">Town / City</label>
+                <input type="text" id="town-city" placeholder="">
+
+                <label for="province">Province</label>
+                <select id="province">
+                    <option>Western Province</option>
+                </select>
+
+                <label for="zip-code">ZIP code</label>
+                <input type="text" id="zip-code" placeholder="">
+
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" placeholder="">
+
+                <label for="email">Email address</label>
+                <input type="email" id="email" placeholder="">
+
+                <label for="additional-info">Additional Information</label>
+                <textarea id="additional-info" rows="3" placeholder=""></textarea>
+            </form>
+        </section>
+
+        <!-- Order Summary Section -->
+        <section class="order-summary">
+            <h2>Product <span>Subtotal</span></h2>
+            <div class="product-details">
+                <p>Asgaard sofa × 1 <span>Rs. 250,000.00</span></p>
+                <p>Subtotal <span>Rs. 250,000.00</span></p>
+                <p class="total">Total <span>Rs. 250,000.00</span></p>
+            </div>
+
+            <div class="payment-methods">
+                <p><input type="radio" id="bank" name="payment" checked> <label for="bank">Direct Bank Transfer</label></p>
+                <p class="payment-info">
+                    Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+                </p>
+                <p><input type="radio" id="cod" name="payment"> <label for="cod">Cash On Delivery</label></p>
+
+
+            <!---->
+        </p>
+        <p>
+        <input type="radio" id="cod" name="payment">   <br>
+        <label for="cod">Direct bank transfer</label>
+        </p>
+            </div>
+
+            <p class="privacy-policy">
+                Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <strong>privacy policy</strong>.
+            </p>
+
+            <button type="submit" class="place-order-btn">Place order</button>
+        </section>
+    </div>
+
+    <!--K-->
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <h3>Free Delivery</h3>
+            <p>For all orders over $50, consectetur adipim scing elit.</p>
+        </div>
+        <div class="feature">
+            <h3>90 Days Return</h3>
+            <p>If goods have problems, consectetur adipim scing elit.</p>
+        </div>
+        <div class="feature">
+            <h3>Secure Payment</h3>
+            <p>100% secure payment, consectetur adipim scing elit.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Address -->
+            <div class="footer-column">
+                <p>400 University Drive Suite 200 Coral Gables, <br> FL 33134 USA</p>
+            </div>
+            <!-- Links -->
+            <div class="footer-column">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page2.html">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Help -->
+            <div class="footer-column">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="page5.html">Checkout</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+            <!-- Newsletter -->
+            <div class="footer-column">
+                <h4>Newsletter</h4>
+                <form action="#">
+                    <input type="email" placeholder="Enter Your Email Address" required>
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2022 Meubel House. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

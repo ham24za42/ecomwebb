@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asgaard Sofa</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /*FIRST CODE*/
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding: 10px;
+    background: #f5f5f5;
+}
+
+.breadcrumb {
+    margin: 20px;
+}
+
+.product-page {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.product-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Images */
+.product-images {
+    flex: 1;
+}
+
+.image-thumbnails img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.main-image img {
+   width: 100%;
+
+}
+
+/* Product Details */
+.product-details {
+    flex: 1;
+}
+
+.price {
+    font-size: 24px;
+    color: #e67e22;
+    margin: 10px 0;
+}
+
+.reviews {
+    color: #ff9800;
+}
+
+.size-selection button,
+.color-box {
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.cart-actions input {
+    width: 50px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.add-to-cart {
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    background: #f5f5f5;
+    padding: 10px;
+}
+
+
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 220px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.view-more {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 1px solid #333;
+}
+
+/* Footer */
+footer {
+    background: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+<style>
+/* CODE 2*/
+    /* Reset Defaults */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Section: Description */
+.description {
+    padding: 20px;
+    text-align: center;
+}
+ 
+
+.product-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-images img {
+    width: 40%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Section: Related Products */
+.related-products {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 220px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.view-more {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 1px solid #333;
+}
+
+/* Footer */
+footer {
+    background: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-links, .footer-help {
+    text-align: left;
+}
+
+.footer-links ul, .footer-help ul {
+    list-style: none;
+}
+
+.footer-links a, .footer-help a {
+    text-decoration: none;
+    color: #333;
+}
+
+.newsletter input {
+    padding: 5px;
+    width: 200px;
+}
+
+.newsletter button {
+    padding: 5px 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+footer p {
+    margin-top: 10px;
+    color: #666;
+}
+</style>
+
+</style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html
+                    ">Shop</a></li>
+                <li>About</li>
+                <li>Contact</li>
+                <li><a href="page6.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Product Page -->
+    <main class="product-page">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> > <a href="page2.html">Shop</a> / Asgaard Sofa
+        </div>
+
+        <div class="product-container">
+            <!-- Product Images -->
+            <div class="product-images">
+                <div class="image-thumbnails">
+                    <img src=" https://s3-alpha-sig.figma.com/img/e8e6/980e/c9e9224b3002d53824688ecee9c882c5?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c2u7U3tB9SGz6qS-rBNV~s8it~vP8-DxZ-sNpG1SOtXKr-i3RWEh9OaiS72cW1-FGU7v4PXoMbkWDRJHsnkyGDo2e-EJozMtJd6eeXq9nCFBOQAh9Dj59Npmi8RzWgA~kUtglXEvtf6HjYzqwFyRQ8Hb4x2kx5NkUWoAG2ETZP3nt8Xiz8zbxB~8zqR~z~qRi-RNmFRogJrUO87EBf-Qn-D9epAUXEZ70ue2bgoi0J7mD8RIuckHo9MaD4sBVkEpm0MwAPW1~l-cesMIz8EHuISZCF4fpqq5pjOgtKp8DwcIeOCRZNZOTH~9d7EgI4knji0iTb9rjX-UcEYnro3xQA__ " alt="Sofa Thumbnail 1">
+                    <img src="  https://s3-alpha-sig.figma.com/img/4d65/4cce/148fae44b3bf6e9ac8ce6743c19e7de6?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kf6fVR8HB722MX-QVywpNsaIniiwT32DUvc7lV-gStBrJ7QLfab7JG3E5a6lPSBjH8pxUE1IE0WkFqXBY225lOnqP9EywPYzthVVZTWTdv~grALSPBPcqaW~qdsruc9gAk7B3tyeIVUddaUFUBFKxKdnRvcFH6~GnxHhx3uWyWmaDbmafzyKg65tIsk~Z7xr8WZLeSaavL3g0nEq9QJlEerFDXYusKPHmRKUgDI9tv~WVySh0qyihu-VK3542Km3lW78ChwU2icjZiTwMQ2djZFn~v9XyBqNEwavzHWQQ6fUAyCFhafXj5Q15DBF4nMhC69mSvZIRE66Y9eRoUCyYQ__  " alt="Sofa Thumbnail 2">
+                    <img src=" https://s3-alpha-sig.figma.com/img/83ef/2293/24c656816d67a755100ac5f664833551?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LLO3c2rFqbePU-ZnHTjkAzSA~4FSo-TAf7vj~-6NwaQMoJZXcokp2ELlouUcFqz9AahuhZzaw7Nois6aJ8ADSVga18PaDvkD0gymZLd5dtelInyiSMSBC~rUhe1uO9b-HZmu8oJ6gsxtgOfdrxQWaleDCAuPb0OHKp6f-ROcS4A0mAT7d0RLzfWkB7QCj2BjWXqzOus6v2wnzFROxbNT67JDSp~B3nr8VupOBmBbI1es2z3glumXm8NiEIvwNKDUxMoiuxUz-3tfDkuUCZ-L8hYblDS8nFRcPG76yrZQOSGtRBf~kwJMk4hs0jXkQoRFZjeY53CmMXSFowiDOggHAg__  " alt="Sofa Thumbnail 3">
+                </div>
+                <div class="main-image">
+                    <img src=" https://s3-alpha-sig.figma.com/img/2ac4/13c1/917ac944454e358f73d0af67e1f1b74e?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dcTyUejgWlc1kVgybzCwPaKrpJWyUdv8KrY2sIJZuRi8KSUQ2utix0vUVY0VUq2tMhe8d2CJyxynSmWNrX9PTZvIsSFZEj~jBu6cNShZSvo1cdgYs~9Fp3VK0-n2oes~Gg5ITGW8Kea1cCFk0GptSVaIv9DFfuAhZfZwyRzN5P5ft4g4ShTmcfa-qCmiIPBjSw4CtoZE0EoAPl1cmO1h091kyeOmgVu3jE4G8q4MGRPKJXMrKz1btfWSw-VJZCYZBnCC-uEN4tN74lYbzBKy2m78C3uN82qIEybq3GV0p7yXTbr2PYTfYEgdRYge0PlDrSQxH96v3BCQ2zDhoGS-Xg__ " alt="Asgaard Sofa">
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1>Asgaard Sofa</h1>
+                <p class="price">Rs. 250,000.00</p>
+                <div class="reviews">
+                    ★★★★☆ (5 Customer Reviews)
+                </div>
+                <p class="description">
+                    Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with well-balanced audio.
+                </p>
+
+                <!-- Size Selection -->
+                <div class="size-selection">
+                    <p>Size</p>
+                    <button>XS</button>
+                    <button>XL</button>
+                    <button>L</button>
+                </div>
+
+                <!-- Color Selection -->
+                <div class="color-selection">
+                    <p>Color</p>
+                    <span class="color-box" style="background-color: #8C52FF;"></span>
+                    <span class="color-box" style="background-color: #000;"></span>
+                    <span class="color-box" style="background-color: #C4B784;"></span>
+                </div>
+
+                <!-- Quantity and Cart Button -->
+                <div class="cart-actions">
+                    <input type="number" value="1" min="1">
+                    <button class="add-to-cart">Add To Cart</button>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="product-meta">
+                    <p>SKU: SS001</p>
+                    <p>Category: Sofas</p>
+                    <p>Tags: Sofa, Chair, Home, Shop</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Follow us: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a></p>
+    </footer>
+
+ <!-- CODE 2-->
+    <!-- Product Description Section -->
+    <section class="description">
+        <h2>Description / Additional information / Reviews [5] </h2>
+
+    
+        <br>
+
+        <p>
+            Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.
+        </p>
+        <p>
+            Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class. the kilbrum is a compact, stout-hearted hero with a well-balanced audio which boast a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influnced leather strap enables easy and stylish travel.
+        </p>
+        <div class="product-images">
+            <img src=" https://s3-alpha-sig.figma.com/img/b739/5be5/3f5927c3cf50e945c3e0f03b3206e810?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=aAf-A~OSGHEdqgpF-HJ13jHJxDeqgY5-qbQiqZTyijS9zUQkv5XvBsiLMBET2IbbtanBjaOghFsiKq1ygiuHQ4QY7ys3L5d9mbFw4ZLmHRC8vgHB~gceZO2cqgLHicdC9E2ooYjdHAKzhlWX~1ZbNSeJAbLgc14xhYH7brucl6-RRQ-5ZFLU9o0SZldQDT1AS8Rih0WKfK6amLl67WPgehaR98feeckSj-qOzPD0ovNavrDAB49KP6CT21usemUJw15bWqdKMpqCkv~XbfA4FSm3UvlSEbkc~oSJyj-8iNDVqsQiL~BdArMWhDCc-yd1ZtPcNJqWDEU8rVZLRt4QpQ__  " alt="Product Image 1">
+            <img src="    https://s3-alpha-sig.figma.com/img/1421/901b/217b5f7ea72cbcd9ce3062c4165744e5?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UHFrIKZoquQ9Qm3o-hZWfS0EBzKuU4488PyR5ff-jppvSw7TBe-80R1Jra6bWVaG58wsi-ESwiqv0DDr7dySkzljdi9VLZlD345XLA668mlXOIItXDNvlrWH7heU-bPDiQf~7gd4OykNWL~GrnAzzbFkatL5h53Y8HO0qbu5hPi9rjbI0Y6MZt6mxjqCtgCtYWsUbUsluapY1MqsGITtGW-22N~dpR03D~2c1D8VVmt6XmPvv9xmz2DAdJah8QDJ0d-pQ8qXI4zSlN8on7JawONUPzL2EoI9vhE-HHhRaoaFgghGu6XCejcuKJRsTlEDJJdfTCtJ~hnnS2qUp-vk7w__  " alt="Product Image 2">
+        </div>
+    </section>
+
+    <!-- Related Products Section -->
+    <section class="related-products">
+        <h2>Related Products</h2>
+        <div class="products-container">
+            <div class="product-item">
+                <img src="   https://s3-alpha-sig.figma.com/img/a924/52e0/58e39805d460c4c63cccc8a518ca116f?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JJl0ZyceMVus9a1kYsf5K1yCpnFu8fshFqvQMnariki4rBD2pmqRxBsSEJQk-D4IMDa~4ZUSJHM0GW6Bc7YzVg28vU~9eqYxbiV~ZmD~ovJD6L8NcPVG5ArRH3W13Y9kMRopSA~NhyKErIVGrS1z-Xr5FIDRfDJr7Xr9kxHrRSBJR4PyAnucsY6nna3WeiELyHiNKYptELaIIF1MqSrT2cg7WYM7HmScUJAHexmDhNHZsmTvpi3D4jEaEPr-A~vtxqN9eBXp~ouZm01n~J5a7oNFK8a1KZWSJ7j605~VfePP0AT-uw4AfCUPtySTZUsJvxkW4MVr7gOYsdCWNdqZnw__   " alt="Trenton Modular Sofa">
+                <p>Trenton modular sofa_3</p>
+                <p><strong>Rs. 25,000.00</strong></p>
+            </div>
+            <div class="product-item">
+                <img src="    https://s3-alpha-sig.figma.com/img/09aa/86df/8158c0cda86398a2874f37f49b06d90d?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hg4bFo-eo7kn~m~kAi7W8RPxoSqCl6bUOwq28ynlNRjg9TEt~76oTF3yZMVsb7VzkRJ97tEqWBJIogiTV6m0tTd59lLBgicxEPPGuzAkWbOjwImivxaEM1wACw1ty4KgyR5~l~BMf7o-bbW7grwdXYvU5~f2XYEJzaPhqh~~cQAu0tHTM-ZX91sbhdPvWHhuQC2upS5tYnjf62V6JUiBptsEr5Ji~ijo8qirCoLL0QvbMrQq4jlei8tAfDmIkUo3Ha6l51kNsXLzdqcxaw98W5PK6xXxkSehLMylCQay6JFebygq~KjgvNBnB~TfzNYtN0aNq2tdOJJnc5dm-1ksSA__  " alt="Granite Dining Table">
+                <p>Granite dining table with dining chair</p>
+                <p><strong>Rs. 25,000.00</strong></p>
+            </div>
+            <div class="product-item">
+                <img src=" https://s3-alpha-sig.figma.com/img/8bbf/604a/28acd7f67bf1de57e6827bf4ce2ed796?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FLlCoZJqCLcXXg7Kpa~FjDNoDp9bCzQ8xu5ZiqeODFVgn7p~558u6AedqcOS~jodKGo0rk1PL4dmr8Rxh0IKjuGhx1Vn6mR4Q6M5scEvAdlmzWiGrTbJR3bvD7r5fuFe0eE4lCaOlqtCeSvLotsweHN0TkFm2a9Aydk3aLh8cjgZ5TV9FJ1rp9y0qizEjgOqNdqiLPxL2xPc-x7kBZLUKi9Sa2Q2LHNSLbIuxKPX2cFOfgqRW4FjgUXr9kEZwCh8tFyCPcsrKANzEN52VotJIedCAuIAG0BM27JlRkuC~jgLkdCNm-E43wKmiyAznYayHBZRHLLV0X0A4SbP2K1acw__    " alt="Outdoor Bar Table">
+                <p>Outdoor bar table and stool</p>
+                <p><strong>Rs. 25,000.00</strong></p>
+            </div>
+            <div class="product-item">
+                <img src=" https://s3-alpha-sig.figma.com/img/1d3d/b619/021f20079d59c4e80115b2d0fd30e46f?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lXRujl6sV6DC0TMVeUmrkP4lJywW-VoC4Rorflx1PgW~Vc0UA2-lsVjIh40fp8Y6umvLGCPpGrOQEh3eu~MuE06MRdGzE0SqOjnXVG0sNi4y6e7wSvEm6rE-yAV9XnNUSR8kGrBE0z4ZnNJUmgfClUTsu32chKby5EEbwz0fV92S~l~rilQQEM0RW7sxyITiVszH~QRESKknx4eQk09-G~1cjFOSN6PPbrl-cUxHklmpHc8sRbaQLr6D0qYiFvMXKZyKCqiyljsQLO-q7gc-C9C2d3opUSl54fT4n-FO2qFYfeRg4Xy-ZfS0dNBi5ht14A6mhAV1EaLhufyizcUjGA__     " alt="Console with Mirror">
+                <p>Plain console with teak mirror</p>
+                <p><strong>Rs. 25,000.00</strong></p>
+            </div>
+        </div>
+        <a href="#" class="view-more">View More</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page2.html">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-help">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Payment Options</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h4>Newsletter</h4>
+                <input type="email" placeholder="Enter Your Email Address">
+                <button>SUBSCRIBE</button>
+            </div>
+        </div>
+        <p class="copyright">
+            © 2022 Meubel House. All rights reserved
+        </p>
+    </footer>
+    
+</body>
+</html>

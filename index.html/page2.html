@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Header Section */
+.header {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu a {
+  font-size: 1rem;
+  color: #333;
+}
+
+.icons a {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Shop Banner Section */
+.shop-banner {
+  background: url('https://s3-alpha-sig.figma.com/img/1461/f3d6/ff74c027a1888544144abe4be6e02cbf?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CJzUmGSk4dQW4F5hg87itVdbgOE1EvVy82-bPZlP2iZ6pblcWloKIhYoCgI3cKwKPusnnT19VhUzF7lsWKT4RkANJfo3lj8NubvTbFW~V3Dp92U-zB1Dpe-hfZ4hSxYE5j2a-sKAiWR69KvvNpUKBd4EgNqj4ewJhYQSzNjZgZU0i4DXuoF4YOkd4C1CGsf5ZjidDGST4vmnX6cHM63Wf-fsyHaEkM-RfFVHI12G8W3X6-oAeNX~-vnO3S6eG0yk0Y9fRD6YAHEalV-coZYAr4eNoTvkL0rMjEUYBpNMJiYljE4zeb~Mm36GtUM7SuxDdmj2524-BHBv20usOe-9Yg__') center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+
+.shop-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-content h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.banner-content p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Filter and Results Section */
+.filter-bar {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-options {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-btn {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.results-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.result-controls select {
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* CODE 2*/
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .product-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      max-height: 150px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .product-card h3 {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    .product-card p {
+      margin: 5px 0;
+      color: #888;
+      font-size: 14px;
+    }
+    .product-card .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+    .pagination {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .pagination button {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      color: #333;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .pagination button.active {
+      background-color: #ffce00;
+      color: #fff;
+      border-color: #ffce00;
+    }
+
+     /* CODE 3 */
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+    
+    /* Footer Styling */
+    footer {
+        background-color: #f9f9f9;
+        color: #333;
+        padding: 20px 10%;
+    }
+    
+    .top-footer {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .feature {
+        text-align: center;
+        flex: 1;
+        margin: 0 10px;
+    }
+    
+    .feature h3 {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+    
+    .feature p {
+        font-size: 0.9rem;
+        color: #777;
+    }
+    
+    .bottom-footer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    
+    .footer-column {
+        margin: 10px;
+    }
+    
+    .footer-column h4 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .footer-column ul {
+        list-style: none;
+    }
+    
+    .footer-column ul li {
+        margin-bottom: 8px;
+    }
+    
+    .footer-column ul li a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s;
+    }
+    
+    .footer-column ul li a:hover {
+        color: #0073e6;
+    }
+    
+    .newsletter form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .newsletter input {
+        padding: 8px;
+        border: 1px solid #ddd;
+        margin-bottom: 8px;
+        border-radius: 4px;
+    }
+    
+    .newsletter button {
+        padding: 8px;
+        background-color: #0073e6;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    
+    .newsletter button:hover {
+        background-color: #005bb5;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+        font-size: 0.8rem;
+        color: #777;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .top-footer, .bottom-footer {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .bottom-footer {
+            align-items: center;
+        }
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <nav class="navbar">
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page2.html">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <a href="page3.html">Asgard sofa</a>
+      </ul>
+      <div class="icons">
+        <a href="#"><i class="icon">👤</i></a>
+        <a href="#"><i class="icon">🔍</i></a>
+        <a href="#"><i class="icon">❤️</i></a>
+        <a href="#"><i class="icon">🛒</i></a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Shop Banner Section -->
+  <section class="shop-banner">
+    <div class="banner-content">
+      <h1>Shop</h1>
+
+      <p><a href="">
+    Home</a> &gt; Shop</p>
+</div>
+  </section>             
+
+  <!-- Filter and Results Section -->
+  <section class="filter-bar">
+    <div class="filters">
+      <button class="filter-btn"><i class="icon">⚙️</i> Filter</button>
+      <div class="view-options">
+        <button class="view-btn">🔲</button>
+        <button class="view-btn">📃</button>
+      </div>
+    </div>
+    <div class="results-info">
+      <span>Showing 1–16 of 32 results</span>
+      <div class="result-controls">
+        <label for="show">Show</label>
+        <select id="show">
+          <option value="16">16</option>
+          <option value="32">32</option>
+        </select>
+        <label for="sort">Short by</label>
+        <select id="sort">
+          <option value="default">Default</option>
+          <option value="price">Price</option>
+          <option value="popularity">Popularity</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  
+  <!--SECOND CODE-->
+<div class="container">
+  <h1>Our Products</h1>
+  <div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="https://s3-alpha-sig.figma.com/img/a924/52e0/58e39805d460c4c63cccc8a518ca116f?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JJl0ZyceMVus9a1kYsf5K1yCpnFu8fshFqvQMnariki4rBD2pmqRxBsSEJQk-D4IMDa~4ZUSJHM0GW6Bc7YzVg28vU~9eqYxbiV~ZmD~ovJD6L8NcPVG5ArRH3W13Y9kMRopSA~NhyKErIVGrS1z-Xr5FIDRfDJr7Xr9kxHrRSBJR4PyAnucsY6nna3WeiELyHiNKYptELaIIF1MqSrT2cg7WYM7HmScUJAHexmDhNHZsmTvpi3D4jEaEPr-A~vtxqN9eBXp~ouZm01n~J5a7oNFK8a1KZWSJ7j605~VfePP0AT-uw4AfCUPtySTZUsJvxkW4MVr7gOYsdCWNdqZnw__" alt="Trenton Modular Sofa">
+      <h3>Trenton Modular Sofa_3</h3>
+      <p>Rs. 25,000.00</p>
+    </div>
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="https://s3-alpha-sig.figma.com/img/09aa/86df/8158c0cda86398a2874f37f49b06d90d?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hg4bFo-eo7kn~m~kAi7W8RPxoSqCl6bUOwq28ynlNRjg9TEt~76oTF3yZMVsb7VzkRJ97tEqWBJIogiTV6m0tTd59lLBgicxEPPGuzAkWbOjwImivxaEM1wACw1ty4KgyR5~l~BMf7o-bbW7grwdXYvU5~f2XYEJzaPhqh~~cQAu0tHTM-ZX91sbhdPvWHhuQC2upS5tYnjf62V6JUiBptsEr5Ji~ijo8qirCoLL0QvbMrQq4jlei8tAfDmIkUo3Ha6l51kNsXLzdqcxaw98W5PK6xXxkSehLMylCQay6JFebygq~KjgvNBnB~TfzNYtN0aNq2tdOJJnc5dm-1ksSA__" alt="Granite Dining Table">
+      <h3>Granite Dining Table with dining chair</h3>
+      <p>Rs. 25,000.00</p>
+    </div>
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="https://s3-alpha-sig.figma.com/img/8bbf/604a/28acd7f67bf1de57e6827bf4ce2ed796?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FLlCoZJqCLcXXg7Kpa~FjDNoDp9bCzQ8xu5ZiqeODFVgn7p~558u6AedqcOS~jodKGo0rk1PL4dmr8Rxh0IKjuGhx1Vn6mR4Q6M5scEvAdlmzWiGrTbJR3bvD7r5fuFe0eE4lCaOlqtCeSvLotsweHN0TkFm2a9Aydk3aLh8cjgZ5TV9FJ1rp9y0qizEjgOqNdqiLPxL2xPc-x7kBZLUKi9Sa2Q2LHNSLbIuxKPX2cFOfgqRW4FjgUXr9kEZwCh8tFyCPcsrKANzEN52VotJIedCAuIAG0BM27JlRkuC~jgLkdCNm-E43wKmiyAznYayHBZRHLLV0X0A4SbP2K1acw__" alt="Outdoor Bar Table and Stool">
+      <h3>Outdoor Bar Table and Stool</h3>
+      <p>Rs. 25,000.00</p>
+    </div>
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="https://s3-alpha-sig.figma.com/img/1d3d/b619/021f20079d59c4e80115b2d0fd30e46f?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lXRujl6sV6DC0TMVeUmrkP4lJywW-VoC4Rorflx1PgW~Vc0UA2-lsVjIh40fp8Y6umvLGCPpGrOQEh3eu~MuE06MRdGzE0SqOjnXVG0sNi4y6e7wSvEm6rE-yAV9XnNUSR8kGrBE0z4ZnNJUmgfClUTsu32chKby5EEbwz0fV92S~l~rilQQEM0RW7sxyITiVszH~QRESKknx4eQk09-G~1cjFOSN6PPbrl-cUxHklmpHc8sRbaQLr6D0qYiFvMXKZyKCqiyljsQLO-q7gc-C9C2d3opUSl54fT4n-FO2qFYfeRg4Xy-ZfS0dNBi5ht14A6mhAV1EaLhufyizcUjGA__" alt="Plain Console Table">
+      <h3>Plain Console with teak mirror</h3>
+      <p>Rs. 25,000.00</p>
+    </div>
+    <!-- Product 5 -->
+    <div class="product-card">
+      <img src=" https://s3-alpha-sig.figma.com/img/f46a/6e57/9af2d8516ec53d1284c0628e97d2ea0a?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jeJjNVACnBNW0IP1sq3u4GyP~F20X3ceuZMh6CSXqdViaxekhJ8YKvIT8SgNiztoNtdvGZvgXe1FIK89-~xQSX52Fr6nY1NcGOG-A-GZBT7CctxMX~IzSA9hEPk2HPuiF7dIhdXHKjFwdGpZ-QKsvNLQKMXtZtx~bDZUVd9BI9QJH3yzQnLouJ3sc2VR6Ioro7SfVU5TwvzN0HZBFBpokgBEIarnmr9BpRhaRh4wIBnoOYo3kyPZGw54sV88tJ8dMhJL-LCy3EScJxuhceqv0gnXkvOYRGfIQK52CboEFFpr4unF1sJ9TRnQ~itXB2FQ-v1WgJ8zlkbPfXPcZAleyA__" alt="Orion Coffee Table">
+      <h3>Grain Coffee Table</h3>
+      <p>Rs. 15,000.00</p>
+    </div>
+    <!-- Product 6 -->
+    <div class="product-card">
+      <img src=" https://s3-alpha-sig.figma.com/img/c3d7/1710/c6aed28ef27fb848794b8cc2feeeae80?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BzGw7Gh0lE6ULK2wWVKR5WQImw2CHNPxdVjQnk35AQDPkrXVIdxtNvguKOLxW7FSgEZfRyuvTc-OQ0Ll2D0zHxiTifWk4mbAEFmJivIUm5HRZWYL3cXlIP6CeAo8k2TMRvfHg9v7w6CNaOfqBCWX-sBCgyoeawCPcYz-V0Rr1JMQ5b0-rU4Z3-qyYoO3wY5p9cx-1bnK8C~rfOZGEaevAIlJ4fPyXf-sF2xVFo0i50aLShaFlpFFZxFykY5Euf-vQFNMGMhha9ur3hPZQkirOqfVpZGezbcu-TPme-ndnnPhjy8Q9vBKIw2yRQ6cIu5o5x~k9igkLN~sGHHaU8tvPQ__" alt="Kvist Coffee Table">
+      <h3>Kent Coffee Table</h3>
+      <p>Rs. 22,500.00</p>
+    </div>
+    <!-- Product 7 -->
+    <div class="product-card">
+      <img src="https://s3-alpha-sig.figma.com/img/fa33/5455/06eb54ab47d16829800ed53309100396?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eEW1urtxJabxSIJTZNgXXqFDcrfQgM9ebSzXRYcjwdB~KyfzHz4taq5EOnqCIozIE8tb-zWP-DidSwOGSpDMGdOcKUP4kqS6ACvUZNaLNT2j3fY5ociNKICymT6FEQYCLjGfTthOOEaoXCscGH-FOZpka5nDZqzLAJi1~QPLm~uZqjlqmhGUdJqca5dM41ml7soa1AevI340G5z37e0NxVBjD7ch-d9-Ye6Nrw0Fz7wbHdYkD8Wn~W5DMpncbwrZ33iMN7l44EP0qlcbwaaLdVsz7s8EjM5t-tnR2HGrhAJnR2bTcLvrBEmWScwUueI20LseOiAcuwL18OPZfNzhuw__" alt="Round Coffee Table">
+      <h3>Round Coffee Table_color 2</h3>
+      <p>Rs. 25,100.00</p>
+    </div>
+    <!-- Product 8 -->
+    <div class="product-card">
+      <img src=" https://s3-alpha-sig.figma.com/img/9b96/c2d3/d3280b573b80f52420eef84a445eecb4?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RuNz3gijzigVL~HdTmTHhidNCYpohYLF4ZO~k9uMq8zKyGLCYooY2cRKvtYfR8440aqvgplm2Xs6mHI1CHLB~3kNOpqO4sgPP2RBRzumD9oaN7Kqx3JdjcAHF-bcVZM21Qtwr5F96egxLhaNfHWPBH71lFc-Ajomee3nFbC5SZZtpPjIshzQ4HBhMFD~TOJlS7Hmv1uxsimR-lHYE~ypasHUpIGia2ATglhf4uA4y1CpNoV-Vf75eZsikqPh4mIjFx7sL1zYEuwJmmvLq2dt40JYZRIlEwP3Jhsz1a1c~7dcLBzZoFJAxdIdp5mnq~4TuBssDZ4S~y2hEdXro9I1Dw__ " alt="Reckendly Nested Tables">
+      <h3>Reclaimed tea coffee Table</h3>
+      <p>Rs. 25,200.00</p>
+    </div>
+    <!-- Product 9 -->
+    <div class="product-card">
+      <img src="https://s3-alpha-sig.figma.com/img/b826/8b85/e6cd03a29914aa82658e06f8ef5b5121?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gAf~7p7U7~neY~W91nvzlSnbfGdO5~ULdlqkpKLmb6dcN2uR4LCBqWdV62o8JMzDdKbNJc08xoxGEIese5t71JjwkRKZuiwsKzSbV~RxJVrl3OaIGpjsKHd4h7AicjR~UmsZdYKQVyXdbjqDXo5IBJH57Vxk1Uuw~ScEPKjCT-QLSOvWHeIsKZzkZcSMjIaiTPr4tk4azykxHySzJ9PSWqr830H9szUQZvK5xuQJwcSpKEoNbyAz4-herCIDjKZV6RZYfP9~DHzpPqqTUa3j4OCVkOKEu9l9BlGHkt5hYyxhB-1orxxpEGXhgTEzanC8hAf20tm9GDmL83FPzujyQg__ " alt="Pine Console Table">
+      <h3>Plane Console_</h3>
+      <p>Rs. 25,820.00</p>
+    </div>
+    <!-- Product 10 -->
+    <div class="product-card">
+      <img src=" https://s3-alpha-sig.figma.com/img/0319/9e8c/d3232a9af9f444c0046aa730992bdf8a?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZA3vQg9TiAYpR2NzQ00OvUrixgfOKQ9xlGuKoCJ6AhRhIvibd9MfjLLg94owTYtYd9b5CtMqABKWzqtaEkPUpIAecPda5TtuNCamZ09nfTqC4ucsTqANOqtkz5y9sMg5cqOlP-6mECuauq5DZMzTnCc8DUCyplAIS5BCSIDibUxw1qYOwhWw8t9hlaOIh9fjiyrKYtKeNGlg-eMuJejJouegmZZyElHL8ejz1RmPb2Ra8ijsBc0WBQb8m8Uem7S5nPI4yRK0ijqNbK1mxslmWUpMFaHQSEN~URu4Bhk2jU44p7N6DfS9vkdf8k4BvqmfvlzsGkLpV6EgB0iv~VcGXw__ " alt="Reckendly Oak Bookshelf">
+      <h3>Reclaimed tea sideboard</h3>
+      <p>Rs. 20,000.00</p>
+    </div>
+    <!-- Product 11 -->
+    <div class="product-card">
+      <img src=" https://s3-alpha-sig.figma.com/img/752d/f0e7/5e14687d3d37cf25ae70c8fb18ee72ba?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mwZF6vMS-EfyIebEbxxL1uSx3TaQNqODuzRhNk9~tmF6o~jgS3JnUESJPZcUbc6gfbav2GYJ0DFRs~874m7MwTrYuowycEttC4Eft8VU9g-RaxLzucay-M86WCGbwR8dunFK5jnh3RRb9rXJBJ2hhfeyXIBLMSvALL1BqlWfO1aZz9YNjq1KODQH51Ne9IlpX068bbtSz2l7i6vfkjyLhHdl~2CQgycx2MfH-afCKrFwPDPYXopG8GSi2QsffZ3ZMx7X9rdIz02wh4ugsxaX7yjL3w6DFHE6g2cJ0JxMoQTRNfynnjCyzZVe36HpLwT9~SS2IfTM7IUMLsHxrp4hlg__ " alt="Solid Wooden Chairs">
+      <h3>Solid Wooden Chairs</h3>
+      <p>Rs. 20,000.00</p>
+    </div>
+    <!-- Product 12 -->
+    <div class="product-card">
+      <img src=" https://s3-alpha-sig.figma.com/img/3b10/d498/8ebb456066c061959f9330832c36374f?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KH2QnBKnI3Qv1yH2BTmb~Ph6EzSQKjudj2vFHjqGAWtq7zG3zmF75dzDwERA~3CFW4eeLig5wPcYrFImGepLP1v0hpcWjaCaZ4i15tsI6RGazCNpLyNXGQaGAW-A9nDma7E5kGaeMqnVdDzWcSWCZG3cU0oa7QGbNC7jn77cgefpbOvilkfDEKrwe-nOnIHovztE7fQ0z3uxm~NU6PsNvmRvHnWVy~ehpgTBSEwjBXaLDwZTlE0CC9oAyAw0nO5Icyo9XC5JsSesjeVZIEYGBg-yRwCEdDy0vcUbfYLdO8gBq1TmgM~x7dHpK4SrtnVba8BtSXE96DiphbUuuVJsmg__ " alt="Belle Chair">
+      <h3>Bella Chair and table</h3>
+      <p>Rs. 10,000.00</p>
+    </div>
+    <!-- Product 13 -->
+    <div class="product-card">
+      <img src=" https://s3-alpha-sig.figma.com/img/6135/4d75/7488710eda6e83a490b9a06ee6995fbd?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XyGa0URxoBYhRnlHWYz~Ob9FUDFBvZ4MuHb7KWLNq4KsPPyPoAb3NMwtUMqwChlQu3dSgUPrbM8AWxc9KmfUtQHZbIz1nrN~1XagKAOo9uiQ086rzjVPIbthWD3sDcB2ORBFQfDvN9uOYmT4ojd7evUEgpQfPq10hyzwZgSZgyCCxCs6Pply0jRZpIkVAl-PqFvMjiWi3pS8unE1rShdYjIONbdvqV2WPz8GIJT2q6pfCBoc5F8wN3VaOpDTY7e1onRNBz~dWKznkkhP3LGkJ3JFx-Muv1VYD~lR16l1ZX2M-ShLmUN3x2eW~0MfOcbTs5j0itJCPe7Wqbe2tGIowA__ " alt="Granite Square Table">
+      <h3>Granite Square side Table</h3>
+      <p>Rs. 25,880.00</p>
+    </div>
+    <!-- Product 14 -->
+    <div class="product-card">
+      <a href="page3.html">Asgard Sofa> 
+      <img src="  https://s3-alpha-sig.figma.com/img/2ac4/13c1/917ac944454e358f73d0af67e1f1b74e?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dcTyUejgWlc1kVgybzCwPaKrpJWyUdv8KrY2sIJZuRi8KSUQ2utix0vUVY0VUq2tMhe8d2CJyxynSmWNrX9PTZvIsSFZEj~jBu6cNShZSvo1cdgYs~9Fp3VK0-n2oes~Gg5ITGW8Kea1cCFk0GptSVaIv9DFfuAhZfZwyRzN5P5ft4g4ShTmcfa-qCmiIPBjSw4CtoZE0EoAPl1cmO1h091kyeOmgVu3jE4G8q4MGRPKJXMrKz1btfWSw-VJZCYZBnCC-uEN4tN74lYbzBKy2m78C3uN82qIEybq3GV0p7yXTbr2PYTfYEgdRYge0PlDrSQxH96v3BCQ2zDhoGS-Xg__ " alt="Arugado Sofa Set">
+      <h3>Asgaard Sofa </h3>     
+      <p>Rs. 25,000.00</p> 
+      </a>
+    </div>
+    <!-- Product 15 -->
+    <div class="product-card">
+      <img src=" https://s3-alpha-sig.figma.com/img/3ed4/51ce/781d825e0f7bbebf3a0621f69b0a4c19?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Q3aIOkJ4PqqBeIRmIeahLYP7qRYODMtEgyi-6p~YOR5w6Wjei4r8OqvIova6SlJRAl1a~B0YL4D1Hm4YFGucec5zmvqASflE~PVe0zxgCHF~s0gXIx0Ba7DjmDvxTK7G0hR0F2P1jkRHfQOzmrfOilel7pnIcHHLlTkyybuhqanSg~C9-68Ny-SInp-CzK2CsdQDvsSIyYz4hCn1eAY4RtovWAFG5WYTnV-RdxxgzobQd3miVcFY6Qu-Y~cfHPsyhodRdAwHFiua~RIYdi1rp5wh7QFbGJKtmMnhkZ4avI-tq4Ti5A~CBrMlTaLlDKzd8PD~QYcORrXhBqCRpyQwsQ__  " alt="Three Seater Sofa">
+      <h3>Maya sofa three Seater</h3>
+      <p>Rs. 11,500.00</p>
+    </div>
+    <!-- Product 16 -->
+    <div class="product-card">
+      <img src="  https://s3-alpha-sig.figma.com/img/e8e6/980e/c9e9224b3002d53824688ecee9c882c5?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c2u7U3tB9SGz6qS-rBNV~s8it~vP8-DxZ-sNpG1SOtXKr-i3RWEh9OaiS72cW1-FGU7v4PXoMbkWDRJHsnkyGDo2e-EJozMtJd6eeXq9nCFBOQAh9Dj59Npmi8RzWgA~kUtglXEvtf6HjYzqwFyRQ8Hb4x2kx5NkUWoAG2ETZP3nt8Xiz8zbxB~8zqR~z~qRi-RNmFRogJrUO87EBf-Qn-D9epAUXEZ70ue2bgoi0J7mD8RIuckHo9MaD4sBVkEpm0MwAPW1~l-cesMIz8EHuISZCF4fpqq5pjOgtKp8DwcIeOCRZNZOTH~9d7EgI4knji0iTb9rjX-UcEYnro3xQA__ " alt="Outdoor Sofa Set">
+      <h3>Outdoor Sofa Set</h3>
+      <p>Rs. 24,400.00</p>
+    </div>
+  </div>
+  <!-- Pagination -->
+  <div class="pagination">
+    <button class="active">1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>Next</button>
+  </div>
+</div>
+<!--CODE 3-->
+    <!-- Footer Section -->
+    <footer>
+      <div class="top-footer">
+          <div class="feature">
+              <h3>Free Delivery</h3>
+              <p>For all orders over $50, consectetur adipiscing elit.</p>
+          </div>
+          <div class="feature">
+              <h3>90 Days Return</h3>
+              <p>If goods have problems, consectetur adipiscing elit.</p>
+          </div>
+          <div class="feature">
+              <h3>Secure Payment</h3>
+              <p>100% secure payment, consectetur adipiscing elit.</p>
+          </div>
+      </div>
+
+      <div class="bottom-footer">
+          <div class="footer-column">
+              <h4>Links</h4>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="page2.html">Shop</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h4>Help</h4>
+              <ul>
+                  <li><a href="#">Payment Options</a></li>
+                  <li><a href="#">Returns</a></li>
+                  <li><a href="#">Privacy Policies</a></li>
+              </ul>
+          </div>
+          <div class="footer-column newsletter">
+              <h4>Newsletter</h4>
+              <form>
+                  <input type="email" placeholder="Enter Your Email Address">
+                  <button type="submit">SUBSCRIBE</button>
+              </form>
+          </div>
+      </div>
+
+      <div class="footer-bottom">
+          <p>2022 MeetHouse. All rights reserved</p>
+      </div>
+  </footer>
+</body>
+</html>
